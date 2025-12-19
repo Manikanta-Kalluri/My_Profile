@@ -3,16 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Manikanta Kalluri — Java Developer | Technical Support</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <title>Manikanta Kalluri — Java Developer · Technical Support</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="logo">Manikanta Kalluri</h1>
+      <div class="brand">
+        <h1 class="logo">Manikanta Kalluri</h1>
+
+        <!-- Ticker directly below the name (header) -->
+        <div class="header-ticker" role="region" aria-label="Job title">
+          <div class="ticker-track" aria-hidden="true">
+            <span>Java Developer · Technical Support</span>
+            <span>Java Developer · Technical Support</span>
+          </div>
+        </div>
+      </div>
+
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -25,13 +38,19 @@
     <section class="hero" aria-labelledby="intro-title">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h2 id="intro-title">Hi, I'm Manikanta Kalluri</h2>
+          <h2 id="intro-title">Hi — I'm Manikanta Kalluri</h2>
           <p class="lead">Java Developer focused on enterprise backend systems, production support, and automation — debugging, optimizing SQL, and stabilizing systems under production pressure.</p>
-          <p><a class="btn" href="#contact">Get in touch</a></p>
+          <p><a class="btn" href="#contact">Contact Me</a></p>
         </div>
 
-        <aside class="hero-card" aria-hidden="true">
-          <div class="avatar">MK</div>
+        <aside class="hero-visual" aria-hidden="true">
+          <div class="reactor">
+            <div class="core"></div>
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="glow"></div>
+          </div>
+          <div class="helmet-badge">MK</div>
         </aside>
       </div>
     </section>
@@ -39,15 +58,12 @@
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="container">
         <h3 id="about-title">About</h3>
-        <p>Hi, I’m Manikanta Kalluri.</p>
 
         <p>I’m a Java Developer working on enterprise backend systems, production support, and automation. I specialize in debugging Java applications, optimizing SQL (Oracle &amp; SQL Server), and stabilizing systems under real production pressure.</p>
 
         <p>I work close to the metal — Linux, CI/CD pipelines, job automation (Stonebranch) — fixing what breaks, improving what’s slow, and automating what shouldn’t be manual.</p>
 
         <p>I’ve shipped bug fixes, hotfixes, and deployments for large-scale applications, handled live incidents, and improved system reliability using Splunk, ServiceNow, and proactive monitoring. I’m comfortable in Agile teams, collaborating across dev, data, and operations to deliver stable releases.</p>
-
-        <p>I care about clean backend logic, performance, and reliability.</p>
 
         <h4>Core skills</h4>
         <ul>
