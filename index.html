@@ -11,13 +11,11 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <h1 class="logo">Manikanta Kalluri</h1>
-
-      </div>
+      <h1 class="logo">MANIKANTA KALLURI</h1>
 
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
@@ -28,21 +26,37 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="intro-title">
+    <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h2 id="intro-title">Hi — I'm Manikanta Kalluri</h2>
-          <!-- Header ticker placed directly after the name (scrolls right → left) -->
-        <div class="header-ticker" role="region" aria-label="Job title">
-          <div class="ticker-track" aria-hidden="true">
-            <span>Java Developer | Technical Support</span>
-            <span>Java Developer | Technical Support</span>
+
+          <!-- BIG NAME -->
+          <h2 class="hero-name">MANIKANTA KALLURI</h2>
+
+          <!-- USERNAME -->
+          <p class="hero-handle">im-manikantakalluri</p>
+
+          <!-- MOVING LINE -->
+          <div class="header-ticker">
+            <div class="ticker-track">
+              <span>Java Developer | Technical Support</span>
+              <span>Java Developer | Technical Support</span>
+            </div>
           </div>
-        </div>
-          <div>
-          <p class="lead">Java Developer focused on enterprise backend systems, production support, and automation — debugging, optimizing SQL, and stabilizing systems under production pressure.</p>
-          </div>
-          <p><a class="btn" href="#contact">Contact Me</a></p>
+
+          <!-- GAP -->
+          <div class="spacer"></div>
+
+          <!-- REMAINING CONTENT -->
+          <p class="lead">
+            Java Developer focused on enterprise backend systems, production support,
+            and automation — debugging, optimizing SQL, and stabilizing systems under
+            production pressure.
+          </p>
+
+          <p>
+            <a class="btn" href="#contact">Contact Me</a>
+          </p>
         </div>
 
         <aside class="hero-visual" aria-hidden="true">
@@ -57,63 +71,58 @@
       </div>
     </section>
 
-    <section id="about" class="section" aria-labelledby="about-title">
+    <section id="about" class="section">
       <div class="container">
-        <h3 id="about-title">About</h3>
+        <h3>About</h3>
 
-        <p>I’m a Java Developer working on enterprise backend systems, production support, and automation. I specialize in debugging Java applications, optimizing SQL (Oracle &amp; SQL Server), and stabilizing systems under real production pressure.</p>
+        <p>
+          I’m a Java Developer working on enterprise backend systems, production support,
+          and automation. I specialize in debugging Java applications, optimizing SQL
+          (Oracle & SQL Server), and stabilizing systems under real production pressure.
+        </p>
 
-        <p>I work close to the metal — Linux, CI/CD pipelines, job automation (Stonebranch) — fixing what breaks, improving what’s slow, and automating what shouldn’t be manual.</p>
-
-        <p>I’ve shipped bug fixes, hotfixes, and deployments for large-scale applications, handled live incidents, and improved system reliability using Splunk, ServiceNow, and proactive monitoring. I’m comfortable in Agile teams, collaborating across dev, data, and operations to deliver stable releases.</p>
+        <p>
+          I work close to the metal — Linux, CI/CD pipelines, job automation (Stonebranch) —
+          fixing what breaks, improving what’s slow, and automating what shouldn’t be manual.
+        </p>
 
         <h4>Core skills</h4>
         <ul>
           <li>Java development & debugging</li>
-          <li>SQL tuning — Oracle &amp; SQL Server</li>
-          <li>Linux, CI/CD pipelines, job automation (Stonebranch)</li>
-          <li>Monitoring &amp; incident response (Splunk, ServiceNow)</li>
-          <li>Production support, hotfixes, reliability improvements</li>
+          <li>SQL tuning — Oracle & SQL Server</li>
+          <li>Linux, CI/CD pipelines, Stonebranch</li>
+          <li>Splunk, ServiceNow, production support</li>
         </ul>
       </div>
     </section>
 
-    <section id="projects" class="section alt" aria-labelledby="projects-title">
+    <section id="projects" class="section alt">
       <div class="container">
-        <h3 id="projects-title">Projects</h3>
-        <div class="grid" role="list">
-          <article class="card" role="listitem">
+        <h3>Projects</h3>
+        <div class="grid">
+          <div class="card">
             <h4>Project One</h4>
-            <p>Placeholder — add project title and URL to replace this description.</p>
-            <p><a class="link" href="#">View</a></p>
-          </article>
-
-          <article class="card" role="listitem">
+            <p>Add real project details.</p>
+          </div>
+          <div class="card">
             <h4>Project Two</h4>
-            <p>Placeholder — add project title and URL to replace this description.</p>
-            <p><a class="link" href="#">View</a></p>
-          </article>
-
-          <article class="card" role="listitem">
-            <h4>Project Three</h4>
-            <p>Placeholder — add project title and URL to replace this description.</p>
-            <p><a class="link" href="#">View</a></p>
-          </article>
+            <p>Add real project details.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section" aria-labelledby="contact-title">
+    <section id="contact" class="section">
       <div class="container">
-        <h3 id="contact-title">Contact</h3>
-        <p>If you'd like to reach out, email: <a href="mailto:kallurimanikanta9@gmail.com">kallurimanikanta9@gmail.com</a></p>
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:kallurimanikanta9@gmail.com">kallurimanikanta9@gmail.com</a></p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Manikanta Kalluri • Built with HTML &amp; CSS</p>
+      <p>&copy; 2025 Manikanta Kalluri</p>
     </div>
   </footer>
 </body>
