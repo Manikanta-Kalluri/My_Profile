@@ -176,7 +176,7 @@
     <h3>Contact Me</h3>
 
     <form id="contact-form"
-          action="https://formsubmit.co/YOUR_EMAIL_HERE"
+          action="https://formsubmit.co/kallurimanikanta9@gmail.com"
           method="POST">
 
       <!-- FormSubmit options -->
@@ -226,14 +226,24 @@
   const successMsg = document.getElementById('form-success');
 
   form.addEventListener('submit', function (e) {
-    // let the form really submit to FormSubmit:
-    // it will handle sending the email to your inbox. [web:254]
-    successMsg.classList.add('show');
+    e.preventDefault(); // stop normal navigation
 
-    // hide again after 4 seconds (optional)
-    setTimeout(() => successMsg.classList.remove('show'), 4000);
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(() => {
+      form.reset();
+      successMsg.classList.add('show');
+      setTimeout(() => successMsg.classList.remove('show'), 4000);
+    })
+    .catch(() => {
+      alert('Failed to send message. Please try again.');
+    });
   });
-</script>
+          </script>
           
 </body>
         </html>
