@@ -133,37 +133,47 @@ body{
 }
 .btn:hover{transform: translateY(-3px)}
 
-.contact-form {
-  max-width: 420px;
-  margin-top: 1rem;
+.field-row{
+  margin-bottom:0.75rem;
+  display:flex;
+  flex-direction:column;
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+.field-row label{
+  font-size:0.9rem;
+  margin-bottom:0.25rem;
+  color:var(--muted);
 }
 
-.field label {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 0.25rem;
+.field-row input,
+.field-row textarea{
+  padding:0.45rem 0.6rem;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:rgba(0,0,0,0.35);
+  color:var(--text);
 }
 
-.field input,
-.field textarea {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  padding: 0.55rem 0.65rem;
-  color: var(--text);
-  font-family: inherit;
+.field-row input:focus,
+.field-row textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 0 1px rgba(224,165,0,0.45);
 }
 
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--gold);
+/* success message animation */
+.form-success{
+  margin-top:0.75rem;
+  font-size:0.9rem;
+  color:#4caf50;
+  opacity:0;
+  transform:translateY(6px);
+  transition:opacity 0.25s ease, transform 0.25s ease;
+}
+
+.form-success.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 .hero-visual{width:170px;display:flex;flex-direction:column;align-items:center;gap:.8rem}
