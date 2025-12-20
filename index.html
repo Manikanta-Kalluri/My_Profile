@@ -173,41 +173,35 @@
 
           <section id="contact" class="section">
   <div class="container">
-    <h3>Contact</h3>
+    <h3>Contact Me</h3>
 
     <form id="contact-form"
-          action="https://formsubmit.co/kallurimanikanta9@gmail.com"
-          method="POST">
+      action="https://formsubmit.co/kallurimanikanta9@gmail.com"
+      method="POST">
 
-      <!-- FormSubmit options -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+  <div class="field-row">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required>
+  </div>
 
-      <div class="field-row">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
-      </div>
+  <div class="field-row">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+  </div>
 
-      <div class="field-row">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
-      </div>
+  <div class="field-row">
+    <label for="phone">Phone (optional)</label>
+    <input id="phone" name="phone" type="tel">
+  </div>
 
-      <div class="field-row">
-        <label for="phone">Phone (optional)</label>
-        <input id="phone" name="phone" type="tel">
-      </div>
+  <div class="field-row">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+  </div>
 
-      <div class="field-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-
-      <button class="btn" type="submit">Send Message</button>
-
-      <!-- success animation text -->
-      <p id="form-success" class="form-success">Message sent ✅</p>
-    </form>
+  <button class="btn" type="submit">Send Message</button>
+  <p id="form-success" class="form-success">Message sent ✅</p>
+</form>
   </div>
           </section>
 
@@ -226,7 +220,13 @@
   const successMsg = document.getElementById('form-success');
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // stop normal navigation
+    e.preventDefault();
+
+    // If required fields fail, show browser validation and stop.
+    if (!form.checkValidity()) {
+      form.reportValidity();   // shows error messages near fields
+      return;
+    }
 
     const formData = new FormData(form);
 
@@ -243,7 +243,7 @@
       alert('Failed to send message. Please try again.');
     });
   });
-          </script>
+            </script>
           
 </body>
         </html>
