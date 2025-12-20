@@ -17,7 +17,11 @@ body{
   color:var(--text);
   line-height:1.5;
 }
-.container{max-width:1000px;margin:auto;padding:1.25rem}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:1.25rem;
+}
 
 /* Header */
 .site-header{
@@ -50,15 +54,42 @@ body{
 .hero{padding:4rem 0}
 .hero-inner{
   display:flex;
-  justify-content:space-between;
   gap:2rem;
+  align-items:center;
+  justify-content:space-between;
 }
+.hero-text{max-width:54ch}
 .hero-name{
   font-family:'Orbitron',sans-serif;
-  color:var(--iron-red);
+  font-size:2.1rem;
   margin:0;
+  color:var(--iron-red);
 }
 .lead{color:var(--muted)}
+
+/* Header ticker */
+.header-ticker{
+  margin:1rem 0;
+  width:320px;
+  height:28px;
+  overflow:hidden;
+  border-radius:6px;
+  border:1px solid rgba(224,165,0,0.2);
+}
+.ticker-track{
+  display:flex;
+  gap:48px;
+  padding:4px 12px;
+  animation:ticker-left 10s linear infinite;
+}
+.ticker-track span{
+  color:var(--gold);
+  font-family:'Orbitron',sans-serif;
+}
+@keyframes ticker-left{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
 
 /* Buttons */
 .btn{
@@ -81,7 +112,7 @@ body{
   color:#fff;
 }
 
-/* ICON logic */
+/* Click-to-show icons */
 .btn-icon{
   opacity:0;
   transform:scale(0.5);
@@ -92,33 +123,76 @@ body{
   transform:scale(1);
 }
 
-/* Ticker */
-.header-ticker{
-  margin:1rem 0;
-  width:320px;
-  height:28px;
-  overflow:hidden;
-  border-radius:6px;
-  border:1px solid rgba(224,165,0,0.2);
-}
-.ticker-track{
+/* Reactor visual */
+.hero-visual{
+  width:170px;
   display:flex;
-  gap:48px;
-  padding:4px 12px;
-  animation:ticker-left 10s linear infinite;
+  flex-direction:column;
+  align-items:center;
+  gap:.8rem;
 }
-.ticker-track span{
-  color:var(--gold);
-  font-family:'Orbitron',sans-serif;
+.reactor{
+  position:relative;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid rgba(224,165,0,0.18);
+}
+.reactor .core{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:radial-gradient(circle,#ffd54a,transparent 60%);
+  box-shadow:0 0 30px rgba(224,165,0,0.55);
+  animation:core-pulse 2s infinite ease-in-out;
+}
+.reactor .ring{
+  position:absolute;
+  border-radius:50%;
+  border:2px solid rgba(224,165,0,0.16);
+}
+.reactor .ring-1{
+  width:110px;
+  height:110px;
+  animation:rotate-ccw 8s linear infinite;
+}
+.reactor .ring-2{
+  width:140px;
+  height:140px;
+  animation:rotate-cw 12s linear infinite;
+}
+@keyframes rotate-cw{to{transform:rotate(360deg)}}
+@keyframes rotate-ccw{to{transform:rotate(-360deg)}}
+@keyframes core-pulse{
+  0%,100%{transform:scale(0.95)}
+  50%{transform:scale(1.05)}
 }
 
-@keyframes ticker-left{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
+/* Badge */
+.helmet-badge{
+  width:68px;
+  height:28px;
+  border-radius:6px;
+  background:linear-gradient(90deg,#e0a500,#a06400);
+  color:#091018;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Orbitron',sans-serif;
 }
 
 /* Sections */
 .section{padding:2rem 0}
+.section.alt{background:rgba(255,255,255,0.02)}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+}
 .card{
   background:rgba(255,255,255,0.03);
   padding:1rem;
@@ -126,9 +200,45 @@ body{
   border:1px solid rgba(255,255,255,0.08);
 }
 
+/* About */
+.about-layout{
+  display:flex;
+  gap:1.5rem;
+}
+.about-avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+}
+
+/* Form */
+.field-row{margin-bottom:.75rem}
+.field-row label{color:var(--muted)}
+.field-row input,
+.field-row textarea{
+  width:100%;
+  padding:.45rem .6rem;
+  border-radius:6px;
+  background:rgba(0,0,0,0.35);
+  border:1px solid rgba(255,255,255,0.08);
+  color:var(--text);
+}
+.form-success{
+  color:#4caf50;
+  opacity:0;
+  transition:.3s;
+}
+.form-success.show{opacity:1}
+
 /* Footer */
 .site-footer{
   border-top:1px solid rgba(255,255,255,0.08);
   padding:1rem 0;
   color:var(--muted);
+}
+
+/* Responsive */
+@media(max-width:860px){
+  .hero-inner{flex-direction:column}
 }
