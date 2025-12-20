@@ -39,11 +39,9 @@
           <h2 class="hero-name">KALLURI</h2>
 
           <div class="header-ticker">
-            <div class="ticker-track">
-              <span>Java Developer | Technical Support</span>
-              <span>Java Developer | Technical Support</span>
-            </div>
+            <span id="ticker-text"></span>
           </div>
+
 
           <p class="lead">
             Java Developer focused on enterprise backend systems, production support,
@@ -203,6 +201,29 @@
       <p>&copy; 2025 Manikanta Kalluri</p>
     </div>
   </footer>
+
+  <script>
+const text = "Java Developer | Technical Support";
+const ticker = document.getElementById("ticker-text");
+let index = 0;
+
+function typeLetter() {
+  ticker.textContent += text[index];
+  index++;
+  if(index < text.length){
+    setTimeout(typeLetter, 150); // speed in milliseconds
+  } else {
+    setTimeout(() => {
+      ticker.textContent = "";
+      index = 0;
+      typeLetter();
+    }, 2000);
+  }
+}
+
+typeLetter();
+</script>
+
 
   <script>
     // contact form submission
