@@ -193,29 +193,18 @@
     );
   }
           </script>
-<section id="contact" class="section" aria-labelledby="contact-title">
+<section id="contact" class="section">
   <div class="container">
-    <h3 id="contact-title">Contact</h3>
+    <h3>Contact</h3>
 
-    <form class="contact-form" onsubmit="handleContact(event)">
-      <div class="field">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" required />
-      </div>
-
-      <div class="field">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" required />
-      </div>
-<div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" required></textarea>
-      </div>
+    <form action="https://formspree.io/f/abcdwxyz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
       <button type="submit" class="btn">Contact Me</button>
     </form>
   </div>
-  
   <p>Email: <a href="mailto:kallurimanikanta9@gmail.com">kallurimanikanta9@gmail.com</a></p>
       
 </section>
