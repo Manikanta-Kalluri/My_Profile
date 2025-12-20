@@ -25,7 +25,19 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-  background:
+  background: linear-gradient(
+    90deg,
+    #ffe0b2,
+    #ffcc80
+  );
+ }
+
+
+.container{max-width:1000px;margin:0 auto;padding:1.25rem}
+
+/* Header */
+.site-header{
+   background:
     linear-gradient(
       135deg,
       #ff0000,
@@ -39,18 +51,6 @@ body{
   background-size: 400% 400%;
   animation: rainbow-bg 15s ease infinite;
   color:var(--text);
-}
-
-
-.container{max-width:1000px;margin:0 auto;padding:1.25rem}
-
-/* Header */
-.site-header{
-  background: linear-gradient(
-    90deg,
-    #ffe0b2,
-    #ffcc80
-  );
 }
 
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
